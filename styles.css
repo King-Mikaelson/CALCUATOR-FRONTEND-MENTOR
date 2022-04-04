@@ -1,0 +1,156 @@
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+
+
+
+
+*, *::before, ::after {
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+}
+
+body{
+    padding:0;
+    margin:0;
+   background-color:hsl(222, 26%, 31%);
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
+
+.calculator-main{
+    margin: 0 auto;
+    min-height: 100vh;
+    max-width: 400px;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+
+.theme-colour{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.theme-state{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+.theme-toggle{
+    width: 5rem
+}
+
+
+
+
+.theme-number{
+    display: flex;
+    
+}
+
+.calculator-grid{
+    /* display:grid;
+    justify-content: center;
+    align-content: center; */
+    /* grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px); */
+    /* gap:1rem; */
+    
+}
+
+
+.output {
+    /* grid-column : 1/ -1; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-bottom: 1rem;
+    background-color:hsl(224, 36%, 15%);
+    border-radius: 0.7rem;
+} 
+
+.button-colour > button {
+    cursor: pointer;
+    outline: none;
+    /* height: 50%; */
+    /* background-color: red; */
+}
+
+
+.button-colour{
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    background-color:  hsl(224, 36%, 15%);
+    border-radius: 0.5rem;
+    
+}
+
+.span-two{
+    grid-column: span 2;
+    height: 3rem;
+    font-size: 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+
+
+
+
+
+.calc-buttons {
+    border: 1px solid red;
+    border: 1px solid #111;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 32px;
+    box-shadow: 0px  0.5px white;
+}
+
+
+.color{
+    color: white;
+   background-color: hsl(225, 21%, 49%);
+   box-shadow: 0px  1px  hsl(224, 28%, 35%);
+   font-size: 15px;
+}
+
+.span-two.equals{
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0px  1px hsl(6, 70%, 34%);
+
+}
+.output .previous-calculation {
+    color: rgba(255, 255, 255, 0.932);
+    font-size: 1.5rem;
+    margin-top: 1rem
+}
+
+.output .current-calculation {
+    color:rgba(255, 255, 255, 0.932);
+    font-size: 2.1rem;
+    margin-top: 2rem
+}
