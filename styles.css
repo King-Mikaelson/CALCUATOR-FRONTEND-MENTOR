@@ -9,6 +9,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 
 
+:root {
+    --body-background: hsl(222, 26%, 31%);
+    --screen-background: hsl(224, 36%, 15%);
+    --body-button-background: hsl(224, 36%, 15%);
+    --header-screen-color: rgba(255, 255, 255, 0.932);
+    --equals-button-background: hsl(6, 63%, 50%);
+    --equals-button: rgba(255, 255, 255, 0.932);
+    --key-numbers-color: hsl(225, 21%, 49%);
+    --key-numbers-shadow-color: hsl(224, 28%, 35%);
+    --delete-reset-color: hsl(225, 21%, 49%);
+    --toggle-background-color: hsl(223, 31%, 20%);
+    --toggle-button-color: hsl(6, 63%, 50%);
+
+}
+
+
+.white-mode {
+    --body-background: hsl(222, 26%, 31%);
+    --screen-background: hsl(224, 36%, 15%);
+    --body-button-background: hsl(224, 36%, 15%);
+    --header-screen-color: rgba(255, 255, 255, 0.932);
+    --equals-button-background: hsl(6, 63%, 50%);
+    --equals-button: rgba(255, 255, 255, 0.932);
+    --key-numbers-color: hsl(225, 21%, 49%);
+    --key-numbers-shadow-color: hsl(224, 28%, 35%);
+    --delete-reset-color: hsl(225, 21%, 49%);
+    --toggle-background-color: hsl(223, 31%, 20%);
+    --toggle-button-color: hsl(6, 63%, 50%);
+}
 
 
 
@@ -21,7 +50,7 @@
 body{
     padding:0;
     margin:0;
-   background-color:hsl(222, 26%, 31%);
+   background-color: var(--body-background);
    padding-top: 30px;
    padding-bottom: 30px;
 }
@@ -37,24 +66,57 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: white;
+    color: var(--header-screen-color);
+}
+
+.theme{
+    margin-top: 2.5rem;
+    padding-right: 1.5rem;
+    font-size: 0.8rem;
 }
 
 .theme-colour{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     
 }
 
 .theme-state{
     display: flex;
-    flex-direction: row;
+    flex-direction:  column;
     
+}
+
+.theme-numbers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* gap: 2rem; */
+    margin-top: -15%;
 }
 
 
 .theme-toggle{
-    width: 5rem
+    margin-top: -10%;
+    border-radius: 50px;
+    border: 3px solid var(--toggle-background-color);
+    background-color: var(--toggle-background-color);
+    
+}
+
+
+input {
+    height: 15px;
+    width: 15px;
+    background-color: var(--toggle-button-color);
+    appearance : none;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+input:hover {
+    cursor: pointer
 }
 
 
@@ -65,36 +127,33 @@ body{
     
 }
 
-.calculator-grid{
-    /* display:grid;
-    justify-content: center;
-    align-content: center; */
-    /* grid-template-columns: repeat(4, 80px);
-    grid-template-rows: minmax(100px, auto) repeat(5, 100px); */
-    /* gap:1rem; */
-    
-}
+input#one {
+    opacity: 1;
+} 
+
+
+/* input#two {
+    opacity: 1;
+}  */
+
 
 
 .output {
-    /* grid-column : 1/ -1; */
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
     margin-bottom: 1rem;
-    background-color:hsl(224, 36%, 15%);
+    background-color: var(--screen-background);
     border-radius: 0.7rem;
 } 
 
 .button-colour > button {
     cursor: pointer;
     outline: none;
-    /* height: 50%; */
-    /* background-color: red; */
 }
 
 
@@ -103,7 +162,7 @@ body{
     padding: 20px;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    background-color:  hsl(224, 36%, 15%);
+    background-color:  var(--body-button-background);
     border-radius: 0.5rem;
     
 }
@@ -113,7 +172,7 @@ body{
     height: 3rem;
     font-size: 15px;
     border-radius: 10px;
-    color: white;
+    color: hsl(0, 0, 100%);
 }
 
 
@@ -122,35 +181,36 @@ body{
 
 
 .calc-buttons {
-    border: 1px solid red;
-    border: 1px solid #111;
+    color: var(--key-numbers-color);
+    border: 1px solid var(--key-numbers-shadow-color);
     padding: 10px;
     border-radius: 10px;
     font-size: 32px;
-    box-shadow: 0px  0.5px white;
+    box-shadow: 0px  2px var(--key-numbers-shadow-color);
 }
 
 
 .color{
     color: white;
-   background-color: hsl(225, 21%, 49%);
+   background-color:  var(--delete-reset-color);
    box-shadow: 0px  1px  hsl(224, 28%, 35%);
    font-size: 15px;
 }
 
 .span-two.equals{
-    background-color: hsl(6, 63%, 50%);
+    color: var(--equals-button);
+    background-color: var(--equals-button-background);
     box-shadow: 0px  1px hsl(6, 70%, 34%);
 
 }
 .output .previous-calculation {
-    color: rgba(255, 255, 255, 0.932);
+    color: var(--header-screen-color);
     font-size: 1.5rem;
     margin-top: 1rem
 }
 
 .output .current-calculation {
-    color:rgba(255, 255, 255, 0.932);
+    color: var(--header-screen-color);
     font-size: 2.1rem;
     margin-top: 2rem
 }

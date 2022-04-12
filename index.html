@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
-    <title> FRONTEN-MENTOR CALCULATOR </title>
+    <title> FRONTEND-MENTOR CALCULATOR </title>
 </head>
+
 
 <body>
     <div class="calculator-main">
@@ -16,47 +17,73 @@
             <h1 class="title">calc</h1>
 
             <div class="theme-colour">
-                    <div class="theme-state">
+
+                <p class="theme">THEME</p>
+                <div class="theme-state">
+                    <div class="theme-numbers">
                         <p class="theme-number">1</p>
                         <p class="theme-number">2</p>
                         <p class="theme-number">3</p>
                     </div>
-                <p class="theme">THEME</p>
-                <div class="theme-toggle">
-                    <input type="radio"/>
-                    <input type="radio"/>
-                    <input type="radio"/>
-                    </div>
+                    <div class="theme-toggle">
+                        <input class="toggle-button" type="radio" name="toggle" id="one"/>
+                        <input class="toggle-button" type="radio" name="toggle" id="two"/>
+                        <input class="toggle-button" type="radio" name="toggle" id="three"/>
+                        </div>
+                </div>
+                
             </div>
         </div>
 
         <div class="calculator-grid">
             <div class="output">
-                <div class="previous-calculation">08888888888</div>
-                <div class="current-calculation">1345677777777</div>
+                <div class="previous-calculation" calc-previous-number></div>
+                <div class="current-calculation" calc-current-number></div>
             </div>
 
 
             <div class="button-colour">
+                <button class="calc-buttons" calc-number>7</button>
+                <button class="calc-buttons" calc-number>8</button>
+                <button class="calc-buttons" calc-number >9</button>
+                <button class="calc-buttons color" calc-delete>DEL</button>
+                <button class="calc-buttons" calc-number>4</button>
+                <button class="calc-buttons" calc-number>5</button>
+                <button class="calc-buttons" calc-number>6</button>
+                <button class="calc-buttons" calc-operation>+</button>
+                <button class="calc-buttons" calc-number>1</button>
+                <button class="calc-buttons" calc-number>2</button>
+                <button class="calc-buttons" calc-number>3</button>
+                <button class="calc-buttons" calc-operation>-</button>
+                <button class="calc-buttons" calc-number>.</button>
+                <button class="calc-buttons" calc-number>0</button>
+                <button class="calc-buttons" calc-operation>/</button>
+                <button class="calc-buttons" calc-operation>x</button>
+                <button class="span-two color" calc-reset>RESET</button>
+                <button class="span-two equals" calc-equals>=</button>
+            </div>
+
+
+            <!-- <div class="button-colour">
                 <button class="calc-buttons">7</button>
                 <button class="calc-buttons">8</button>
                 <button class="calc-buttons">9</button>
-                <button class="calc-buttons color">DEL</button>
-                <button class="calc-buttons">4</button>
-                <button class="calc-buttons">5</button>
-                <button class="calc-buttons">6</button>
-                <button class="calc-buttons">+</button>
+                <button class="calc-buttons color" data-action="delete">DEL</button>
+                <button class="calc-buttons" >4</button>
+                <button class="calc-buttons" >5</button>
+                <button class="calc-buttons" >6</button>
+                <button class="calc-buttons" data-action="add">+</button>
                 <button class="calc-buttons">1</button>
-                <button class="calc-buttons">2</button>
+                <button class="calc-buttons" >2</button>
                 <button class="calc-buttons">3</button>
-                <button class="calc-buttons">-</button>
-                <button class="calc-buttons">.</button>
+                <button class="calc-buttons" data-action="subtract">-</button>
+                <button class="calc-buttons" data-action="decimal">.</button>
                 <button class="calc-buttons">0</button>
-                <button class="calc-buttons">/</button>
-                <button class="calc-buttons">x</button>
-                <button class="span-two color">RESET</button>
-                <button class="span-two equals">=</button>
-            </div>
+                <button class="calc-buttons" data-action="divide">/</button>
+                <button class="calc-buttons" data-action="multiply">&times;</button>
+                <button class="span-two color" data-action="reset">RESET</button>
+                <button class="span-two equals" data-action="equals">=</button>
+            </div> -->
            
 
 
