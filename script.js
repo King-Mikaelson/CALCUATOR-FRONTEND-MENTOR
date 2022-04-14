@@ -93,7 +93,7 @@ getDisplayedNumber(number) {
 
 
 
-
+// Toggle button functionality
 const calculatorNumbers = document.querySelectorAll("[calc-number]");
 const calculatorOperations = document.querySelectorAll("[calc-operation]");
 const removeOperation = document.querySelector("[calc-delete]");
@@ -137,7 +137,7 @@ removeOperation.addEventListener("click", button => {
     calculator.updateScreen()
 })
 
-
+const mainmode = document.querySelector(".calculator-main")
 const toggleButon = document.querySelectorAll(".toggle-button")
 // var arr = [...toggleButon]
 
@@ -152,13 +152,16 @@ divsArr.forEach((element, index) => {
         element.style.opacity = "1";
 
         if (index == 0) {
-            document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+            document.getElementsByTagName("body")[0].style.backgroundColor = " hsl(222, 26%, 31%)";
+            // mainmode.classList.toggle('')
 
         }else if (index == 1) {
-            document.getElementsByTagName("body")[0].style.backgroundColor = "teal";
+            mainmode.classList.toggle('white-mode');
+            document.getElementsByTagName("body")[0].style.backgroundColor = "hsl(0, 0%, 90%)";
 
         }else {
-            document.getElementsByTagName("body")[0].style.backgroundColor = "rgb(92, 204, 125)"
+            mainmode.classList.toggle('purple-mode');
+            document.getElementsByTagName("body")[0].style.backgroundColor = "hsl(268, 75%, 9%)"
         }
 
         divsArr.filter(function (item) {
@@ -169,162 +172,3 @@ divsArr.forEach((element, index) => {
     })
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const calculatorKeys = document.querySelector(".button-colour")
-
-
-
-// calculatorKeys.addEventListener("click", e => {
-//     if (e.target.matches("button")){
-//         const calculatorKey = e.target
-//         const action = calculatorKey.dataset.action
-
-
-// if (!action) {
-//     console.log("number key!")
-// }
-
-// if (action === "add" ||
-//     action === "subtract" ||
-//     action === "multiply" ||
-//     action === "divide"
-//     ) {
-//     console.log("operator key!")
-// }
-
-// if (action === "decimal") {
-//     console.log("decimal key!")
-// }
-
-// if (action === "delete") {
-//     console.log("delete key!")
-// }
-
-
-// if (action === "reset") {
-//     console.log("reset key!")
-// }
-// if (action === "equals") {
-//     console.log("equals key!")
-// }
-
-//     }
-    
-// })
-

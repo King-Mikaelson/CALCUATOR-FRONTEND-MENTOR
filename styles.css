@@ -16,27 +16,55 @@
     --header-screen-color: rgba(255, 255, 255, 0.932);
     --equals-button-background: hsl(6, 63%, 50%);
     --equals-button: rgba(255, 255, 255, 0.932);
+    --equals-button-shadow: hsl(6, 70%, 34%);
+    --key-background: hsl(30, 25%, 89%);
     --key-numbers-color: hsl(225, 21%, 49%);
     --key-numbers-shadow-color: hsl(224, 28%, 35%);
     --delete-reset-color: hsl(225, 21%, 49%);
+    --delete-reset-shadow-color: hsl(224, 28%, 35%);
     --toggle-background-color: hsl(223, 31%, 20%);
     --toggle-button-color: hsl(6, 63%, 50%);
 
 }
 
 
-.white-mode {
-    --body-background: hsl(222, 26%, 31%);
-    --screen-background: hsl(224, 36%, 15%);
-    --body-button-background: hsl(224, 36%, 15%);
-    --header-screen-color: rgba(255, 255, 255, 0.932);
-    --equals-button-background: hsl(6, 63%, 50%);
+
+
+.white-mode{
+    --body-background: hsl(0, 0%, 90%);
+    --screen-background: hsl(0, 0%, 93%);
+    --body-button-background: hsl(0, 5%, 81%);
+    --header-screen-color: hsl(60, 10%, 19%);
+    --equals-button-background: hsl(25, 98%, 40%);
     --equals-button: rgba(255, 255, 255, 0.932);
-    --key-numbers-color: hsl(225, 21%, 49%);
-    --key-numbers-shadow-color: hsl(224, 28%, 35%);
-    --delete-reset-color: hsl(225, 21%, 49%);
-    --toggle-background-color: hsl(223, 31%, 20%);
-    --toggle-button-color: hsl(6, 63%, 50%);
+    --equals-button-shadow: hsl(25, 99%, 27%);
+    --key-background: hsl(45, 7%, 89%);
+    --key-numbers-color: hsl(60, 10%, 19%);
+    --key-numbers-shadow-color: hsl(0, 0, 100%);
+    --delete-reset-color: hsl(185, 42%, 37%);
+    --delete-reset-shadow-color: hsl(185, 58%, 25%);
+    --toggle-background-color: hsl(0, 5%, 81%);
+    --toggle-button-color: hsl(25, 98%, 40%);
+    
+}
+
+
+.purple-mode{
+    --body-background: hsl(268, 75%, 9%);
+    --screen-background: hsl(268, 71%, 12%);
+    --body-button-background: hsl(268, 71%, 12%);
+    --header-screen-color: hsl(52, 100%, 62%);
+    --equals-button-background:  hsl(176, 100%, 44%);
+    --equals-button: hsl(198, 20%, 13%);
+    --equals-button-shadow:  hsl(177, 92%, 70%);
+    --key-background: hsl(268, 47%, 21%);
+    --key-numbers-color: hsl(52, 100%, 62%);
+    --key-numbers-shadow-color: hsl(290, 70%, 36%);
+    --delete-reset-color: hsl(281, 89%, 26%);
+    --delete-reset-shadow-color: hsl(285, 91%, 52%);
+    --toggle-background-color: hsl(268, 71%, 12%);
+    --toggle-button-color: hsl(176, 100%, 44%);
+    
 }
 
 
@@ -92,7 +120,6 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    /* gap: 2rem; */
     margin-top: -15%;
 }
 
@@ -130,12 +157,6 @@ input:hover {
 input#one {
     opacity: 1;
 } 
-
-
-/* input#two {
-    opacity: 1;
-}  */
-
 
 
 .output {
@@ -187,30 +208,31 @@ input#one {
     border-radius: 10px;
     font-size: 32px;
     box-shadow: 0px  2px var(--key-numbers-shadow-color);
+    background-color: var(--key-background);
 }
 
 
 .color{
     color: white;
    background-color:  var(--delete-reset-color);
-   box-shadow: 0px  1px  hsl(224, 28%, 35%);
+   box-shadow: 0px  1px var(--delete-reset-shadow-color);
    font-size: 15px;
 }
 
 .span-two.equals{
     color: var(--equals-button);
     background-color: var(--equals-button-background);
-    box-shadow: 0px  1px hsl(6, 70%, 34%);
+    box-shadow: 0px  1px var();
 
 }
 .output .previous-calculation {
     color: var(--header-screen-color);
     font-size: 1.5rem;
-    margin-top: 1rem
+    padding-top: 1rem
 }
 
 .output .current-calculation {
     color: var(--header-screen-color);
     font-size: 2.1rem;
-    margin-top: 2rem
+    padding-top: 2rem
 }
